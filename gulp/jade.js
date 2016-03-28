@@ -9,9 +9,25 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   let dirs = config.directories;
   let dest = path.join(taskTarget);
   let dataPath = path.join(dirs.source, dirs.data);
+  let preview = dirs.preview;
 
   // Jade template compile
+  gulp.task('jade:preview', () => {
+    execJade('preview');
+  });
+
   gulp.task('jade', () => {
+    execJade();
+  });
+
+  let execJade = function(target) {
+    let destTarget;
+    if (target && target === 'preview') {
+      destTarget = preview;
+    } else {
+      destTarget = dest;
+    }
+
     let siteData = {};
     if (fs.existsSync(dataPath)) {
       // Convert directory to JS Object
@@ -66,7 +82,8 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
       removeEmptyAttributes: true,
       removeRedundantAttributes: true
     }))
-    .pipe(gulp.dest(dest))
+    .pipe(gulp.dest(destTarget))
     .on('end', browserSync.reload);
-  });
+
+  }
 }

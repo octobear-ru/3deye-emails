@@ -36,18 +36,18 @@ gulp.task('default', ['clean'], () => {
 gulp.task('build', [
   'copy',
   'imagemin',
-  'jade',
-  'sass',
-  'browserify'
+  'jade:preview',
+  'sass:preview',
+  //'browserify',
+  'inlineCss'
 ]);
 
 // Server tasks with watch
 gulp.task('serve', [
-  'imagemin',
   'copy',
-  'jade',
-  'sass',
-  'browserify',
+  'jade:preview',
+  'sass:preview',
+  //'browserify',
   'browserSync',
   'watch'
 ]);
