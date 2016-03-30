@@ -1,0 +1,27 @@
+{
+  "name": "foundation-emails",
+  "version": "2.0.1",
+  "homepage": "http://foundation.zurb.com/emails",
+  "authors": [
+    "ZURB <foundation@zurb.com>"
+  ],
+  "description": "A framework for designing responsive emails by ZURB.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.1",
+    "commit": "3c1658219aea5933bb3dff8b4cc91c5c67b67f7c"
+  },
+  "_source": "git://github.com/zurb/foundation-emails.git",
+  "_target": "^2.0.1",
+  "_originalSource": "foundation-emails",
+  "_direct": true
+}

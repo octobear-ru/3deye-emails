@@ -16,8 +16,11 @@ head
     link(rel='stylesheet', href= baseUrl + 'styles/main.css')
 
 body
-  .app-body
-    block content
+  .app-container
+    .app-body
+      .app-body-content
+        block content
+      block footer
 
   //block scripts
     script(src= baseUrl + 'scripts/main.js')

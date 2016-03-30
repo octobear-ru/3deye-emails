@@ -1,0 +1,57 @@
+.btn
+  -webkit-font-smoothing: antialiased
+
+@each $c in success $c-green-bright, primary $gradient-primary-bottom, danger $c-red
+  .btn-#{nth($c,1)}
+    font-weight: bold
+    text-shadow: 0 1px 0 rgba(#000, 0.1)
+    transition: background 0.2s ease, border 0.2s ease
+    background-color: nth($c,2)
+    &, &:focus
+      border: 1px solid darken(nth($c,2), 7%)
+    &:hover
+      background-color: darken(nth($c,2), 10%)
+      border: 1px solid darken(nth($c,2), 10%)
+
+.btn-link
+  color: $link-color
+  transition: color 0.2s ease
+  &, &:hover, &:focus
+    background: none
+    outline: none
+    text-decoration: none
+  &:hover
+    color: $link-color-hover
+
+.btn-link--gray
+  &, &:focus
+    color: $c-gray
+  &:hover
+    color: darken($c-gray, 15%)
+
+.btn-link--blue-light
+  &, &:focus
+    color: $c-blue-light
+  &:hover
+    color: $c-blue
+
+.btn-link--white
+  &, &:focus
+    color: rgba(#fff, 0.8)
+  &:hover
+    color: #fff
+
+.btn-collapse
+  padding:
+    left: 0
+    right: 0
+
+.btn-wide
+  padding:
+    left: $grid-gutter-width/2
+    right: $grid-gutter-width/2
+
+.btn-wide-lg
+  padding:
+    left: $grid-gutter-width
+    right: $grid-gutter-width
