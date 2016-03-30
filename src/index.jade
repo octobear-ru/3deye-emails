@@ -4,12 +4,12 @@ block content
   include _elements/logo
   .app-header
     .container-block
-      h2.text-center.content-block
+      h2.text-center.app-title
         | New events on your cameras
   .content-block
     each i in [0, 1]
       if i > 0
-        hr.layout-divider-line
+        .layout-divider.layout-divider-line
         .content-block
       .container-block
         .content-block
@@ -23,7 +23,7 @@ block content
               |  March 16, 2016.
           .text-center.content-block-sm
             a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
-              img.content-image(src='images/camera-shot-sample.jpg')
+              img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg')
           .text-center.text-muted
             p
               | You might want to check out what's going on.

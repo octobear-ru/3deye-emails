@@ -70,6 +70,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
       locals: {
         config: config,
         debug: true,
+        ghPagesUrl: config.ghPagesUrl,
         site: {
           data: siteData
         }
