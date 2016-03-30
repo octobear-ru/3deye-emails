@@ -1,8 +1,0 @@
-node_modules
-*.log
-build
-preview
-tmp
-.grunt
-.DS_Store
-config/keys.js
