@@ -8,3 +8,4 @@ tmp
 config/keys.js
 .publish
 .awspublish
+preview/
