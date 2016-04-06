@@ -8,27 +8,30 @@
     right: none
     bottom: 1px solid $line-color
 
-.content-block
+table.container
+  width: auto !important
+
+table.content-block td
   padding-bottom: $grid-gutter-width
 
-.container-block
+table.container-block td
   padding:
     left: $grid-gutter-width/2
     right: $grid-gutter-width/2
 
 @each $b in xs $grid-gutter-width/3, sm $grid-gutter-width/2, lg $grid-gutter-width*2
-  .content-block-#{nth($b,1)}
+  table.content-block-#{nth($b,1)} td
     padding-bottom: nth($b,2)
 
 .content-image
   display: inline-block
   max-width: 100%
 
-.layout-divider
+table.layout-divider td
   @extend %layout-divider-style
   padding: $grid-gutter-width/2 0
 
-.layout-divider-line
+table.layout-divider-line td
   @extend %layout-divider-style
 
 

@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import foldero from 'foldero';
 import jade from 'jade';
+import inky from 'inky';
 
 export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   let dirs = config.directories;
@@ -76,6 +77,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
         }
       }
     }))
+    .pipe(inky())
     .pipe(plugins.htmlmin({
       collapseBooleanAttributes: true,
       conservativeCollapse: true,
