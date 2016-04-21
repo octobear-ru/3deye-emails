@@ -1,6 +1,22 @@
 extends _layouts/base
 
 block content
+  <!--[if mso]>
+  h1
+    | Verify your account
+  p.text-center
+    | Welcome to 3deye! Please confirm your email address.
+  p
+    | &nbsp;
+  a
+    | Confirm Email
+  p
+    | Or, paste this link into your browser:
+    br
+    a(href='' target="_blank")
+      |  http://3deye.me/sample-link
+  <![endif]-->
+  <![if !mso]>
   container
     row
       columns
@@ -20,7 +36,7 @@ block content
             a
               | Confirm Email
 
-        hr
+        p &nbsp;
         center
           p
             | Or, paste this link into your browser:
@@ -28,9 +44,12 @@ block content
             a(href='' target="_blank")
               |  http://3deye.me/sample-link
 
+  <![endif]>
+
 block footer
-  container
+  <![if !mso]>
+  container.app-table-footer
     row
       columns
         include _elements/footer
-
+  <![endif]>

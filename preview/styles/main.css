@@ -1922,10 +1922,21 @@ table.app-table-container th.columns {
   height: 45px;
 }
 
-.app-footer {
-  background-color: #eee;
+.app-footer, .app-footer td, .app-footer th, .app-footer div,
+table.app-table-footer,
+table.app-table-footer td,
+table.app-table-footer th,
+table.app-table-footer div {
+  background-color: none;
   font-size: 12px;
-  padding: 30px 15px;
+}
+
+.app-footer th.columns,
+table.app-table-footer th.columns {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */

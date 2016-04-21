@@ -1,5 +1,12 @@
-.app-footer
-  background-color: $app-background
-  font-size: $font-size-small
-  padding: $grid-gutter-width $grid-gutter-width/2
+.app-footer,
+table.app-table-footer
+  &, td, th, div
+    background-color: none
+    font-size: $font-size-small
+  th.columns
+    padding:
+      top: $grid-gutter-width
+      bottom: $grid-gutter-width
+      left: $grid-gutter-width/2
+      right: $grid-gutter-width/2
 
