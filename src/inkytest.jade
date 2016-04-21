@@ -1,0 +1,36 @@
+extends _layouts/base
+
+block content
+  container
+    row
+      columns
+        center
+          include _elements/logo
+  container.app-table-container
+    row
+      columns
+        h1.text-center
+          | Verify your account
+        p.text-center
+          | Welcome to 3deye! Please confirm your email address.
+        p
+          | &nbsp;
+        center
+          button.large.rounded
+            a
+              | Confirm Email
+
+        hr
+        center
+          p
+            | Or, paste this link into your browser:
+            br
+            a(href='' target="_blank")
+              |  http://3deye.me/sample-link
+
+block footer
+  container
+    row
+      columns
+        include _elements/footer
+

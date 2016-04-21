@@ -3,31 +3,32 @@ extends _layouts/base
 block content
   include _elements/logo
   .app-body-content
-    row
-      columns
-        .text-center.app-title
-          | Verify your account
-        container.content-block
-          container.container-block
-            container.content-block-sm.text-center
-              | Welcome to 3deye! Please confirm your email address.
-            center
-              a.btn-primary(href='' target="_blank")
-                | Confirm Email &rarr;
-            table.content-block
-              tbody
-                tr
-                  td
-                    table.layout-divider-line
-                      tbody
-                        tr
-                          td
-            container.content-block
-              .content-block.text-center
-                | Or, paste this link into your browser:
-                br
-                a(href='' target="_blank")
-                  |  http://3deye.me/sample-link
+    .app-container
+      row
+        columns
+          .text-center.app-title
+            | Verify your account
+          container.content-block
+            container.container-block
+              container.content-block-sm.text-center
+                | Welcome to 3deye! Please confirm your email address.
+              center
+                a.btn-primary(href='' target="_blank")
+                  | Confirm Email &rarr;
+              table.content-block
+                tbody
+                  tr
+                    td
+                      table.layout-divider-line
+                        tbody
+                          tr
+                            td
+              container.content-block
+                .content-block.text-center
+                  | Or, paste this link into your browser:
+                  br
+                  a(href='' target="_blank")
+                    |  http://3deye.me/sample-link
 
 block footer
   include _elements/footer

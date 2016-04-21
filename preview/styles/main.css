@@ -1093,12 +1093,12 @@ table.button {
 table.button table td {
   text-align: left;
   color: #fefefe;
-  background: #2199e8;
-  border: 2px solid #2199e8;
+  background: #3981b8;
+  border: 2px solid #3981b8;
 }
 
 table.button table td.radius {
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 table.button table td.rounded {
@@ -1108,13 +1108,13 @@ table.button table td.rounded {
 table.button table td a {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   color: #fefefe;
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px 8px 16px;
-  border: 0px solid #2199e8;
-  border-radius: 3px;
+  border: 0px solid #3981b8;
+  border-radius: 4px;
 }
 
 table.button:hover table tr td a,
@@ -1150,7 +1150,7 @@ table.button.small table a {
 
 table.button.large table a {
   padding: 10px 20px 10px 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 table.expand,
@@ -1176,14 +1176,14 @@ table.expanded center {
 table.button:hover table td,
 table.button:visited table td,
 table.button:active table td {
-  background: #147dc2;
+  background: #2d6691;
   color: #fefefe;
 }
 
 table.button:hover table a,
 table.button:visited table a,
 table.button:active table a {
-  border: 0px solid #147dc2;
+  border: 0px solid #2d6691;
 }
 
 table.button.secondary table td {
@@ -1303,7 +1303,7 @@ th.callout-inner.alert {
   max-width: 100%;
   -webkit-transition: -webkit-box-shadow 200ms ease-out;
           transition: box-shadow 200ms ease-out;
-  border-radius: 3px;
+  border-radius: 4px;
   margin-bottom: 16px;
 }
 
@@ -1698,7 +1698,11 @@ body, table.body, h1, h2, h3, h4, h5, h6, p, td, th, a {
   line-height: 1.428571429;
 }
 
-.layout-divider, .layout-divider-line {
+hr {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+table.layout-divider td, table.layout-divider-line td {
   display: block;
   width: 100%;
   height: 1px;
@@ -1708,24 +1712,28 @@ body, table.body, h1, h2, h3, h4, h5, h6, p, td, th, a {
   border-bottom: 1px solid #e6e6e6;
 }
 
-.content-block {
+table.container {
+  width: auto !important;
+}
+
+table.content-block td {
   padding-bottom: 30px;
 }
 
-.container-block {
+table.container-block td {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.content-block-xs {
+table.content-block-xs td {
   padding-bottom: 10px;
 }
 
-.content-block-sm {
+table.content-block-sm td {
   padding-bottom: 15px;
 }
 
-.content-block-lg {
+table.content-block-lg td {
   padding-bottom: 60px;
 }
 
@@ -1734,7 +1742,7 @@ body, table.body, h1, h2, h3, h4, h5, h6, p, td, th, a {
   max-width: 100%;
 }
 
-.layout-divider {
+table.layout-divider td {
   padding: 15px 0;
 }
 
@@ -1862,7 +1870,20 @@ body, table.body, h1, h2, h3, h4, h5, h6, p, td, th, a {
 html,
 body,
 .app-container {
-  background-color: #f2f2f2;
+  background-color: #eee;
+}
+
+table.container {
+  background: none;
+}
+
+table.app-table-container {
+  background-color: #fff;
+}
+
+table.app-table-container th.columns {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .app-container {
@@ -1902,7 +1923,7 @@ body,
 }
 
 .app-footer {
-  background-color: #f2f2f2;
+  background-color: #eee;
   font-size: 12px;
   padding: 30px 15px;
 }
