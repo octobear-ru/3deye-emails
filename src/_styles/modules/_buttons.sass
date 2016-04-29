@@ -59,3 +59,25 @@
   padding:
     left: $grid-gutter-width
     right: $grid-gutter-width
+
+.tdy-btn-primary
+  &, &:focus, &:hover
+    text-decoration: none
+    color: #fff
+    background-color: $button-background
+    border: solid $button-background
+    border:
+      @each $s in top, bottom
+        #{$s}:
+          width: 10px !important
+      @each $s in left, right
+        #{$s}:
+          width: 20px !important
+    line-height: 2
+    font-weight: bold
+    text-align: center
+    cursor: pointer
+    display: inline-block
+    border-radius: 5px
+    text-transform: capitalize
+

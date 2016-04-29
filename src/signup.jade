@@ -3,7 +3,7 @@ extends _layouts/base
 block content
   include _elements/logo
   .app-body-content
-    .app-container
+    .app-container-white
       row
         columns
           .text-center.app-title
@@ -15,21 +15,15 @@ block content
               center
                 a.btn-primary(href='' target="_blank")
                   | Confirm Email &rarr;
-              table.content-block
-                tbody
-                  tr
-                    td
-                      table.layout-divider-line
-                        tbody
-                          tr
-                            td
               container.content-block
-                .content-block.text-center
+              container
+                .text-center
                   | Or, paste this link into your browser:
                   br
                   a(href='' target="_blank")
                     |  http://3deye.me/sample-link
 
 block footer
+  spacer
   include _elements/footer
 

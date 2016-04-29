@@ -1702,10 +1702,8 @@ hr {
   border-bottom: 1px solid #e6e6e6;
 }
 
-table.layout-divider td, table.layout-divider-line td {
-  display: block;
-  width: 100%;
-  height: 1px;
+table.layout-divider > tbody > tr > td, table.layout-divider-line > tbody > tr > td {
+  height: 2px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -1716,24 +1714,24 @@ table.container {
   width: auto !important;
 }
 
-table.content-block td {
+table.content-block > tbody > tr > td {
   padding-bottom: 30px;
 }
 
-table.container-block td {
+table.container-block > tbody > tr > td {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-table.content-block-xs td {
+table.content-block-xs > tbody > tr > td {
   padding-bottom: 10px;
 }
 
-table.content-block-sm td {
+table.content-block-sm > tbody > tr > td {
   padding-bottom: 15px;
 }
 
-table.content-block-lg td {
+table.content-block-lg > tbody > tr > td {
   padding-bottom: 60px;
 }
 
@@ -1742,7 +1740,7 @@ table.content-block-lg td {
   max-width: 100%;
 }
 
-table.layout-divider td {
+table.layout-divider > tbody > tr > td {
   padding: 15px 0;
 }
 
@@ -1851,6 +1849,24 @@ table.layout-divider td {
   padding-right: 30px;
 }
 
+.tdy-btn-primary, .tdy-btn-primary:focus, .tdy-btn-primary:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #3981b8;
+  border: solid #3981b8;
+  border-top-width: 10px !important;
+  border-bottom-width: 10px !important;
+  border-left-width: 20px !important;
+  border-right-width: 20px !important;
+  line-height: 2;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1869,8 +1885,13 @@ table.layout-divider td {
 
 html,
 body,
-.app-container {
+.app-container,
+.app-container-white {
   background-color: #eee;
+}
+
+.app-container-white {
+  background-color: #fff;
 }
 
 table.container {
@@ -1886,7 +1907,7 @@ table.app-table-container th.columns {
   padding-bottom: 30px;
 }
 
-.app-container {
+.app-container, .app-container-white {
   display: block;
   width: 100%;
   text-align: center;
