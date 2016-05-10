@@ -1,0 +1,129 @@
+extends _layouts/base
+
+block content
+  container
+    row
+      columns
+        center
+          include _elements/logo
+  container.app-table-container.app-container-white
+    spacer(size=30)
+    row
+      columns
+        h1.text-center
+          | New events on your cameras
+    row
+      columns
+        .text-size-larger
+          | Current events
+        span.text-muted.text-size-small
+          | From last 30 mins
+          | &mdash;&nbsp;
+        a.btn-link--gray-dark.text-size-small(href="http://beta.3deye.me")
+          | Change settings
+        spacer(size=5)
+    row
+      for i in [0, 1, 2, 3]
+        columns
+          .text-center
+            a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+              img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg')
+          spacer(size=5)
+          a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+            span.text-size-small
+              | at 17:24:59 on Wednesday,
+              | March 16, 2016
+          spacer(size=10)
+    center
+      a.tdy-btn-primary-sm(href="http://3deye.me/sample-link" target="_blank")
+        | View all 30 events &rarr;
+
+    spacer(size=40)
+
+    row
+      columns
+        .text-size-larger
+          | Merged events
+        span.text-muted.text-size-small
+          | Simultaneous events from cameras
+          | &mdash;&nbsp;
+        a.btn-link--gray-dark.text-size-small(href="http://beta.3deye.me")
+          | Change settings
+        spacer(size=5)
+    for i in [0, 1, 2, 3]
+      row
+        columns(large=4 small=4)
+          .text-center
+            a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+              img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg')
+        columns(large=8 small=8)
+          a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+            span.text-size-large
+              | Merged event #1
+            br
+            | Camera #1, Sensor #1, Camera #2
+            br
+            span.text-size-small.text-muted
+              | at 17:24:59 on Wednesday,
+              | March 16, 2016
+      spacer(size=5)
+
+
+    center
+      a.tdy-btn-primary-sm(href="http://3deye.me/sample-link" target="_blank")
+        | View all 30 events &rarr;
+
+    spacer(size=40)
+
+    row
+      columns
+        .text-size-larger
+          | Events from previous periods
+        span.text-muted.text-size-small
+          | Last 8 hours
+          | &mdash;&nbsp;
+        a.btn-link--gray-dark.text-size-small(href="http://beta.3deye.me")
+          | Change settings
+
+        spacer(size=5)
+    row
+      for i in [0, 1, 2, 3]
+        columns
+          .text-center
+            a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+              img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg')
+          spacer(size=5)
+          a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+            span.text-size-small
+              | at 17:24:59 on Wednesday,
+              | March 16, 2016
+
+          spacer(size=10)
+
+    center
+      a.tdy-btn-primary-sm(href="http://3deye.me/sample-link" target="_blank")
+        | View all 30 events &rarr;
+
+    spacer(size=40)
+
+        // spacer(size=10)
+        // p.text-center
+        //   | Welcome to 3deye! Please confirm your email address.
+        // spacer(size=10)
+        // center
+        //   a.tdy-btn-primary(href="http://3deye.me/sample-link" target="_blank")
+        //     | Confirm Email &rarr;
+        // spacer(size=30)
+        // center.text-center
+        //   | Or, paste this link into your browser:
+        //   br
+        //   a(href='http://3deye.me/sample-link' target="_blank")
+        //     |  http://3deye.me/sample-link
+        // spacer(size=20)
+
+
+block footer
+  container.app-table-footer
+    row
+      columns
+        include _elements/footer

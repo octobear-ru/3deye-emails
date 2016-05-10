@@ -1,29 +1,34 @@
 extends _layouts/base
 
 block content
-  include _elements/logo
-  .app-body-content
-    .app-container-white
-      row
-        columns
-          .text-center.app-title
-            | Verify your account
-          container.content-block
-            container.container-block
-              container.content-block-sm.text-center
-                | Welcome to 3deye! Please confirm your email address.
-              center
-                a.btn-primary(href='' target="_blank")
-                  | Confirm Email &rarr;
-              container.content-block
-              container
-                .text-center
-                  | Or, paste this link into your browser:
-                  br
-                  a(href='' target="_blank")
-                    |  http://3deye.me/sample-link
+  container
+    row
+      columns
+        center
+          include _elements/logo
+  container.app-table-container.app-container-white
+    spacer(size=30)
+    row
+      columns
+        h1.text-center
+          | Verify your account
+        spacer(size=10)
+        p.text-center
+          | Welcome to 3deye! Please confirm your email address.
+        spacer(size=10)
+        center
+          a.tdy-btn-primary(href="http://3deye.me/sample-link" target="_blank")
+            | Confirm Email &rarr;
+        spacer(size=30)
+        center.text-center
+          | Or, paste this link into your browser:
+          br
+          a(href='http://3deye.me/sample-link' target="_blank")
+            |  http://3deye.me/sample-link
+        spacer(size=20)
 
 block footer
-  spacer
-  include _elements/footer
-
+  container.app-table-footer
+    row
+      columns
+        include _elements/footer

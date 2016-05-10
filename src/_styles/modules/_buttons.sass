@@ -20,7 +20,7 @@
 .btn-link
   color: $link-color
   transition: color 0.2s ease
-  &, &:hover, &:focus
+  &, &:hover, &:focus, &:visited
     background: none
     outline: none
     text-decoration: none
@@ -28,19 +28,25 @@
     color: $link-color-hover
 
 .btn-link--gray
-  &, &:focus
+  &, &:focus, &:visited
     color: $c-gray
   &:hover
     color: darken($c-gray, 15%)
 
+.btn-link--gray-dark
+  &, &:focus, &:visited
+    color: $c-gray-dark
+  &:hover
+    color: darken($c-gray-dark, 15%)
+
 .btn-link--blue-light
-  &, &:focus
+  &, &:focus, &:visited
     color: $c-blue-light
   &:hover
     color: $c-blue
 
 .btn-link--white
-  &, &:focus
+  &, &:focus, &:visited
     color: rgba(#fff, 0.8)
   &:hover
     color: #fff
@@ -61,7 +67,7 @@
     right: $grid-gutter-width
 
 .tdy-btn-primary
-  &, &:focus, &:hover
+  &, &:focus, &:hover, &:visited
     text-decoration: none
     color: #fff
     background-color: $button-background
@@ -79,5 +85,16 @@
     cursor: pointer
     display: inline-block
     border-radius: 5px
-    text-transform: capitalize
+    text-transform: none
+
+.tdy-btn-primary-sm
+  @extend .tdy-btn-primary
+  &, &:focus, &:hover
+    border:
+      @each $s in top, bottom
+        #{$s}:
+          width: 5px !important
+      @each $s in left, right
+        #{$s}:
+          width: 10px !important
 

@@ -3,3 +3,9 @@ body, table.body, h1, h2, h3, h4, h5, h6, p, td, th, a
 
 hr
   border-bottom: 1px solid $c-gray-lighter
+
+@each $s in small $font-size-small, smaller $font-size-smaller, large $font-size-large, larger $font-size-larger
+  .text-size-#{nth($s, 1)}
+    font-size: nth($s, 2)
+
+
