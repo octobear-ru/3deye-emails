@@ -22,18 +22,19 @@ block content
         a.btn-link--gray-dark.text-size-small(href="http://beta.3deye.me")
           | Change settings
         spacer(size=5)
-    row
-      for i in [0, 1, 2, 3]
-        columns
-          .text-center
-            a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
-              img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg')
-          spacer(size=5)
-          a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
-            span.text-size-small
-              | at 17:24:59 on Wednesday,
-              | March 16, 2016
-          spacer(size=10)
+    for i in [0, 1, 2]
+      row
+        for i in [0, 1, 2, 3]
+          columns
+            .text-center
+              a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+                img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg')
+            spacer(size=5)
+            a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+              span.text-size-small
+                | at 17:24:59 on Wednesday,
+                | March 16, 2016
+            spacer(size=10)
     center
       a.tdy-btn-primary-sm(href="http://3deye.me/sample-link" target="_blank")
         | View all 30 events &rarr;
@@ -52,20 +53,20 @@ block content
         spacer(size=5)
     for i in [0, 1, 2, 3]
       row
-        columns(large=4 small=4)
-          .text-center
+        for i in [0, 1]
+          columns(large=6 small=6)
             a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
               img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg')
-        columns(large=8 small=8)
-          a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
-            span.text-size-large
-              | Merged event #1
-            br
-            | Camera #1, Sensor #1, Camera #2
-            br
-            span.text-size-small.text-muted
-              | at 17:24:59 on Wednesday,
-              | March 16, 2016
+            spacer(size=5)
+            a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+              span.text-size-large
+                | Merged event #1
+              br
+              | Camera #1, Sensor #1, Camera #2
+              br
+              span.text-size-small.text-muted
+                | at 17:24:59 on Wednesday,
+                | March 16, 2016
       spacer(size=5)
 
 
