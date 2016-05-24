@@ -1,3 +1,8 @@
+$content-image-md-width: 240px
+$content-image-md-height: 150px
+$content-image-sm-width: $content-image-md-width/2
+$content-image-sm-height: $content-image-md-height/2
+
 %layout-divider-style
   //display: block
   //width: 100%
@@ -35,6 +40,11 @@ table.container-block
 .content-image
   display: inline-block
   max-width: 100%
+
+//@each $s in (md $content-image-md-width $content-image-md-height, sm $content-image-sm-width $content-image-sm-height)
+  .content-image-#{nth($s, 1)}
+    width: nth($s, 1)
+    height: nth($s, 2)
 
 table.layout-divider
   & > tbody
