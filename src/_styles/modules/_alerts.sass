@@ -1,0 +1,10 @@
+%camera-block
+  box-sizing: border-box
+  padding: 10px
+
+@each $c in 'green-bright' $c-green-bright, 'orange' $c-orange, 'red' $c-red, 'yellow' $c-yellow
+  .camera-block--#{nth($c,1)}
+    @extend %camera-block
+    border: 2px solid lighten(nth($c,2), 20%)
+
+

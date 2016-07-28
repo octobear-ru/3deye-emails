@@ -1,0 +1,174 @@
+extends _layouts/base
+
+block content
+  container
+    row
+      columns
+        center
+          include _elements/logo
+  container.app-table-container.app-container-white
+    spacer(size=30)
+    row
+      columns
+        h1.text-center
+          | New events on your cameras
+    row
+      columns
+        .text-size-larger
+          | Cameras disconnected
+
+        spacer(size=5)
+    row
+      columns
+        .camera-block.camera-block--red
+          .camera-block__title
+            | Camera 3
+          spacer(size=5)
+          .text-size-small
+            .text-size-small
+              strong
+                | Status:
+                | &nbsp;
+              strong.text-color-red
+                | offline
+            .text-size-small
+              strong
+                | # of disconnects:
+              | 1
+            .text-size-small
+              strong
+                | Last disconnected:
+                | &nbsp;
+              | From: July 13, 2016 6:05 pm to: ___
+            spacer(size=5)
+            a.btn-link--blue-light.text-size-small(href="http://beta.3deye.me")
+              | Change settings
+
+          spacer(size=5)
+          a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+            img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg' width="240" height="150")
+          spacer(size=5)
+          a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+            span.text-size-small
+              | at 17:24:59 on Wednesday,
+              | March 16, 2016
+          spacer(size=10)
+      columns
+    spacer(size=40)
+    row
+      columns
+        .text-size-larger
+          | Cameras disconnected
+
+        spacer(size=5)
+    row
+      for i in [5, 6]
+        columns
+          .camera-block
+            .camera-block__title
+              | Camera #{i}
+            spacer(size=5)
+            .text-size-small
+              .text-size-small
+                strong
+                  | Status:
+                  | &nbsp;
+                strong.text-color-green-bright
+                  | online
+              .text-size-small
+                strong
+                  | # of disconnects:
+                | 1
+              .text-size-small
+                strong
+                  | Last disconnected:
+                  | &nbsp;
+                | From: July 13, 2016 6:05 pm to: ___
+              spacer(size=5)
+              a.btn-link--blue-light.text-size-small(href="http://beta.3deye.me")
+                | Change settings
+
+            spacer(size=5)
+            a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+              img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg' width="240" height="150")
+            spacer(size=5)
+            a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+              span.text-size-small
+                | at 17:24:59 on Wednesday,
+                | March 16, 2016
+            spacer(size=10)
+    center
+      a.tdy-btn-primary-sm(href="http://3deye.me/sample-link" target="_blank")
+        | View details &rarr;
+
+    spacer(size=40)
+    row
+      columns
+        .text-size-larger
+          | Cameras that were previously offline
+        spacer(size=5)
+    for k in [0, 1, 2]
+      row
+        for i in [7, 8]
+          columns
+            .camera-block--orange
+              .camera-block__title
+                | Camera #{i}
+              spacer(size=5)
+              .text-size-small
+                .text-size-small
+                  strong
+                    | Status:
+                    | &nbsp;
+                  strong.text-color-red
+                    | offline
+                .text-size-small
+                  strong
+                    | # of disconnects:
+                  | 1
+                .text-size-small
+                  strong
+                    | Last disconnected:
+                    | &nbsp;
+                  | From: July 13, 2016 6:05 pm to: ___
+                spacer(size=5)
+                a.btn-link--blue-light.text-size-small(href="http://beta.3deye.me")
+                  | Change settings
+
+              spacer(size=5)
+              a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+                img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg' width="240" height="150")
+              spacer(size=5)
+              a.btn-link--gray-dark(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+                span.text-size-small
+                  | at 17:24:59 on Wednesday,
+                  | March 16, 2016
+              spacer(size=10)
+    center
+      a.tdy-btn-primary-sm(href="http://3deye.me/sample-link" target="_blank")
+        | View details &rarr;
+
+    spacer(size=40)
+
+
+        // spacer(size=10)
+        // p.text-center
+        //   | Welcome to 3deye! Please confirm your email address.
+        // spacer(size=10)
+        // center
+        //   a.tdy-btn-primary(href="http://3deye.me/sample-link" target="_blank")
+        //     | Confirm Email &rarr;
+        // spacer(size=30)
+        // center.text-center
+        //   | Or, paste this link into your browser:
+        //   br
+        //   a(href='http://3deye.me/sample-link' target="_blank")
+        //     |  http://3deye.me/sample-link
+        // spacer(size=20)
+
+
+block footer
+  container.app-table-footer
+    row
+      columns
+        include _elements/footer
