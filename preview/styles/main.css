@@ -1804,9 +1804,9 @@ table.layout-divider > tbody > tr > td {
 }
 
 .btn-danger, .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger:visited {
-  border: solid #ff644b;
+  border: solid #ff2b24;
   border-width: 12px 20px;
-  background-color: #ff644b;
+  background-color: #ff2b24;
   color: #fff;
 }
 
@@ -1912,6 +1912,79 @@ table.layout-divider > tbody > tr > td {
 
 .text-muted {
   color: #999999;
+}
+
+.text-color-green-bright {
+  color: #00c95e;
+}
+
+.text-color-orange {
+  color: #fa9600;
+}
+
+.text-color-red {
+  color: #ff2b24;
+}
+
+.text-color-yellow {
+  color: #fac000;
+}
+
+.alerts__page-title {
+  margin-bottom: 0;
+  font-size: 28px;
+  line-height: 1.3em;
+}
+
+.camera-block-row, .camera-block--green-bright, .camera-block--highlight-green-bright, .camera-block--orange, .camera-block--highlight-orange, .camera-block--red, .camera-block--highlight-red, .camera-block--yellow, .camera-block--highlight-yellow {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+}
+
+.camera-block-row td.columns, .camera-block--green-bright td.columns, .camera-block--highlight-green-bright td.columns, .camera-block--orange td.columns, .camera-block--highlight-orange td.columns, .camera-block--red td.columns, .camera-block--highlight-red td.columns, .camera-block--yellow td.columns, .camera-block--highlight-yellow td.columns, .camera-block-row th.columns, .camera-block--green-bright th.columns, .camera-block--highlight-green-bright th.columns, .camera-block--orange th.columns, .camera-block--highlight-orange th.columns, .camera-block--red th.columns, .camera-block--highlight-red th.columns, .camera-block--yellow th.columns, .camera-block--highlight-yellow th.columns {
+  padding-bottom: 0;
+}
+
+.camera-block-row {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.camera-block--green-bright {
+  border: 2px solid #30ff91;
+}
+
+.camera-block--highlight-green-bright {
+  background-color: #7dffba;
+  border-bottom: 1px solid #4aff9e;
+}
+
+.camera-block--orange {
+  border: 2px solid #ffc061;
+}
+
+.camera-block--highlight-orange {
+  background-color: #ffdeae;
+  border-bottom: 1px solid #ffca7b;
+}
+
+.camera-block--red {
+  border: 2px solid #ff8e8a;
+}
+
+.camera-block--highlight-red {
+  background-color: #ffd8d7;
+  border-bottom: 1px solid #ffa6a4;
+}
+
+.camera-block--yellow {
+  border: 2px solid #ffda61;
+}
+
+.camera-block--highlight-yellow {
+  background-color: #ffecae;
+  border-bottom: 1px solid #ffe07b;
 }
 
 html,

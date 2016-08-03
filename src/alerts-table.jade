@@ -1,0 +1,166 @@
+extends _layouts/base
+
+block content
+  container
+    row
+      columns
+        center
+          include _elements/logo
+  container.app-table-container.app-container-white
+    spacer(size=30)
+    row
+      columns
+        .alerts__page-title
+          | Alarms from TEST ALARM for last 30 minutes
+        spacer(size=10)
+        a.btn-link--blue.text-size-small(href="http://beta.3deye.me")
+          | Change settings
+        spacer(size=10)
+
+    row
+      columns
+        .text-size-larger.text-color-red
+          | Cameras disconnected
+    .camera-block-row
+      row
+        columns
+          strong.text-size-small.text-muted
+            | Camera
+        columns(large=1)
+          strong.text-size-small.text-muted
+            | Status
+        columns
+          strong.text-size-small.text-muted
+            | Disconnects
+        columns
+          strong.text-size-small.text-muted
+            | Last disconnect
+        columns
+          strong.text-size-small.text-muted
+            | Screenshot
+
+    .camera-block-row.camera-block--highlight-red
+      row
+        columns
+          .camera-block__title
+            | Camera 3
+          spacer(size=5)
+          a.btn-link--blue.text-size-small(href="http://beta.3deye.me")
+            | Alarm settings
+        columns(large=1)
+          spacer(size=4)
+          .text-size-small
+            strong.text-color-red
+              | offline
+        columns
+          spacer(size=4)
+          .text-size-small
+            | 1
+        columns
+          .text-size-small
+            | From: July 13, 2016 6:05 pm to: ___
+        columns
+          a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+            img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg' width="120" height="75")
+
+    .camera-block-row
+      row
+        columns
+          .camera-block__title
+            | Camera 4
+          spacer(size=5)
+          a.btn-link--blue.text-size-small(href="http://beta.3deye.me")
+            | Alarm settings
+        columns(large=1)
+          spacer(size=4)
+          .text-size-small
+            .text-size-small
+              strong.text-color-green-bright
+                | online
+        columns
+          spacer(size=4)
+          .text-size-small
+            | 1
+        columns
+          .text-size-small
+            | From: July 13, 2016 6:05 pm to: ___
+        columns
+          a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+            img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg' width="120" height="75")
+
+    .camera-block-row.camera-block--highlight-orange
+      row
+        columns
+          .camera-block__title
+            | Camera 5
+          spacer(size=5)
+          a.btn-link--blue.text-size-small(href="http://beta.3deye.me")
+            | Disable camera
+          spacer(size=5)
+          a.btn-link--blue.text-size-small(href="http://beta.3deye.me")
+            | Open camera
+
+        columns(large=1)
+          spacer(size=4)
+          .text-size-small
+            .text-size-small
+              strong.text-color-red
+                | offline
+        columns
+          spacer(size=4)
+          .text-size-small
+            | 1
+        columns
+          .text-size-small
+            | From: July 13, 2016 6:05 pm to: ___
+        columns
+          a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+            img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg' width="120" height="75")
+
+    .camera-block-row.camera-block--highlight-yellow
+      row
+        columns
+          .camera-block__title
+            | Camera 5
+          spacer(size=5)
+          a.btn-link--blue.text-size-small(href="http://beta.3deye.me")
+            | Disable camera
+          spacer(size=5)
+          a.btn-link--blue.text-size-small(href="http://beta.3deye.me")
+            | Open camera
+
+        columns(large=1)
+          spacer(size=4)
+          .text-size-small
+            .text-size-small
+              strong.text-color-red
+                | offline
+        columns
+          spacer(size=4)
+          .text-size-small
+            | 1
+        columns
+          .text-size-small
+            | From: July 13, 2016 6:05 pm to: ___
+        columns
+          a(href='http://grupocomuio.synology.me:5004/onvif/device_service' target="_blank")
+            img.content-image(src='#{ghPagesUrl}/images/camera-shot-sample.jpg' width="120" height="75")
+
+
+    spacer(size=40)
+
+    row
+      columns
+        .text-size-larger
+          | Cameras that were disconnected in last 30 minutes
+        spacer(size=10)
+        .text-size-small
+          | No cameras were disconnected in last 30 minutes
+
+    spacer(size=40)
+
+block footer
+  container.app-table-footer
+    row
+      columns
+        include _elements/footer

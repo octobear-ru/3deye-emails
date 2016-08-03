@@ -1,10 +1,27 @@
+.alerts__page-title
+  margin-bottom: 0
+  font-size: $font-size-largest
+  line-height: 1.3em
+
 %camera-block
   box-sizing: border-box
   padding: 10px
+  td, th
+    &.columns
+      padding-bottom: 0
+
+.camera-block-row
+  @extend %camera-block
+  padding: 10px 0
+  border-bottom: 1px solid $c-gray-lightest
 
 @each $c in 'green-bright' $c-green-bright, 'orange' $c-orange, 'red' $c-red, 'yellow' $c-yellow
   .camera-block--#{nth($c,1)}
     @extend %camera-block
     border: 2px solid lighten(nth($c,2), 20%)
+  .camera-block--highlight-#{nth($c,1)}
+    @extend %camera-block
+    background-color: lighten(nth($c,2), 35%)
+    border-bottom: 1px solid lighten(nth($c,2), 25%)
 
 
